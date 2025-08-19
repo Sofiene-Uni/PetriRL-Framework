@@ -20,16 +20,16 @@ This combination enables **interpretable, scalable, and high-performing RL agent
 
 The PetriRL framework is organized into multiple environments, each targeting a different class of problems:  
 
-- 🔹 [**PetriRL Intralogistics**](https://github.com/Sofiene-Uni/Intralogistics)  
+- 🔹 [**PetriRL Intralogistics**](https://github.com/Sofiene-Uni/PetriRL_Intralogistics)  
   *Dynamic scheduling of AGVs, tool sharing, and shop floor optimization in Flexible Manufacturing Systems.*  
 
-- 🔹 [**PetriRL DJJSP**](#) *(link to repo)*  
+- 🔹 [**PetriRL DJJSP**](#) *(https://github.com/Sofiene-Uni/PetriRL_DJSSP)*  
   *Dynamic Job Shop Scheduling Problem (DJJSP) with machine breakdowns, variable job arrivals, and stochastic environments.*  
 
-- 🔹 [**PetriRL Hyperheuristics**](#) *(link to repo)*  
+- 🔹 [**PetriRL Hyperheuristics**](#) *(Planned for 2025)*  
   *A super-heuristic framework where RL learns to combine and select dispatching rules for adaptive scheduling.*  
 
-- 🔹 [**PetriRL Multi-Objective Optimization**](#) *(link to repo)*  
+- 🔹 [**PetriRL Multi-Objective Optimization**](#) *(Planned 2026)*  
   *Combines expert agents and actor-critic RL to solve scheduling problems with multiple objectives (e.g., makespan, tardiness, energy consumption).*  
 
 Each environment is **OpenAI Gym-compatible**, comes with **benchmarks** (Taillard + custom large-scale instances), and is designed for **reproducibility and extension**.  
@@ -54,7 +54,10 @@ Install the core PetriRL package via pip:
 pip install petrirl
 ```
 
-Specific environments can be installed or cloned individually from their repositories (see links above).  
+Specific environments can be created by selecting the corresponding Gym environment ID:
+
+1) Logistics:  env = gym.make("petrirl-djssp-v0")
+1) Fault tolerant env = gym.make("petrirl-dft-v0")
 
 ---
 
@@ -81,19 +84,28 @@ These works are part of my PhD and published in international journals:
 If you use this framework, please cite the associated papers:  
 
 ```bibtex
-@article{petriRL2025intralogistics,
-  title={Flexible Manufacturing Systems intralogistics: Dynamic optimization of AGVs and tool sharing using Colored-Timed Petri Nets and actor–critic RL with actions masking},
-  journal={Engineering Applications of Artificial Intelligence},
-  year={2025},
-  author={Sofiene ...}
+Sofiene Lassoued, Laxmikant Shrikant Baheti, Nathalie Weiß-Borkowski, Stefan Lier, Andreas Schwung,
+Flexible Manufacturing Systems intralogistics: Dynamic optimization of AGVs and tool sharing using Colored-Timed Petri Nets and actor–critic RL with actions masking,
+Journal of Manufacturing Systems,
+Volume 82,
+2025,
+Pages 405-419,
+ISSN 0278-6125,
+https://doi.org/10.1016/j.jmsy.2025.06.017.
+(https://www.sciencedirect.com/science/article/pii/S0278612525001694)
 }
 
-@article{petriRL2024intro,
-  title={Introducing PetriRL: An innovative framework for JSSP resolution integrating Petri nets and event-based reinforcement learning},
-  journal={Engineering Applications of Artificial Intelligence},
-  year={2024},
-  author={Sofiene ...}
-}
+
+@article{LASSOUED2024690,
+title = {Introducing PetriRL: An innovative framework for JSSP resolution integrating Petri nets and event-based reinforcement learning},
+journal = {Journal of Manufacturing Systems},
+volume = {74},
+pages = {690-702},
+year = {2024},
+issn = {0278-6125},
+doi = {https://doi.org/10.1016/j.jmsy.2024.04.028},
+url = {https://www.sciencedirect.com/science/article/pii/S0278612524000943},
+author = {Sofiene Lassoued and Andreas Schwung}}
 ```
 
 ---
