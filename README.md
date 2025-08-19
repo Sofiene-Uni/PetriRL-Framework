@@ -56,9 +56,14 @@ pip install petrirl
 
 Specific environments can be created by selecting the corresponding Gym environment ID:
 
-1) Logistics:  env = gym.make("petrirl-djssp-v0")
-1) Fault tolerant env = gym.make("petrirl-dft-v0")
-
+1) Logistics: 
+```bash
+ env = gym.make("petrirl-djssp-v0")
+```
+2) Fault tolerant:
+```bash
+ env = gym.make("petrirl-dft-v0")
+```
 ---
 
 ## Research Context  
@@ -84,20 +89,10 @@ These works are part of my PhD and published in international journals:
 If you use this framework, please cite the associated papers:  
 
 ```bibtex
-Sofiene Lassoued, Laxmikant Shrikant Baheti, Nathalie Weiß-Borkowski, Stefan Lier, Andreas Schwung,
-Flexible Manufacturing Systems intralogistics: Dynamic optimization of AGVs and tool sharing using Colored-Timed Petri Nets and actor–critic RL with actions masking,
-Journal of Manufacturing Systems,
-Volume 82,
-2025,
-Pages 405-419,
-ISSN 0278-6125,
-https://doi.org/10.1016/j.jmsy.2025.06.017.
-(https://www.sciencedirect.com/science/article/pii/S0278612525001694)
-}
 
-
-@article{LASSOUED2024690,
+@article{
 title = {Introducing PetriRL: An innovative framework for JSSP resolution integrating Petri nets and event-based reinforcement learning},
+author = {Sofiene Lassoued and Andreas Schwung},
 journal = {Journal of Manufacturing Systems},
 volume = {74},
 pages = {690-702},
@@ -105,7 +100,19 @@ year = {2024},
 issn = {0278-6125},
 doi = {https://doi.org/10.1016/j.jmsy.2024.04.028},
 url = {https://www.sciencedirect.com/science/article/pii/S0278612524000943},
-author = {Sofiene Lassoued and Andreas Schwung}}
+}
+
+@article{
+title = {Flexible Manufacturing Systems intralogistics: Dynamic optimization of AGVs and tool sharing using Colored-Timed Petri Nets and actor–critic RL with actions masking},
+author = {Sofiene Lassoued, Laxmikant Shrikant Baheti, Nathalie Weiß-Borkowski, Stefan Lier, Andreas Schwung}
+journal = {Journal of Manufacturing Systems},
+volume = {82},
+pages = {405-419},
+year = {2025},
+issn = {0278-6125},
+doi = {https://doi.org/10.1016/j.jmsy.2025.06.017.},
+url = {https://www.sciencedirect.com/science/article/pii/S0278612525001694},
+
 ```
 
 ---
