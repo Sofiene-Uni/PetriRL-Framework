@@ -23,10 +23,10 @@ The PetriRL framework is organized into multiple environments, each targeting a 
 - 🔹 [**PetriRL Intralogistics**](https://github.com/Sofiene-Uni/PetriRL_Intralogistics)  
   *Dynamic scheduling of AGVs, tool sharing, and shop floor optimization in Flexible Manufacturing Systems.*  
 
-- 🔹 [**PetriRL DJJSP**](https://github.com/Sofiene-Uni/PetriRL_DJSSP)  
+- 🔹 [**PetriRL DJJSP**](https://github.com/Sofiene-Uni/PetriRL_DJSSP) *(Planned for 2025)* 
   *Dynamic Job Shop Scheduling Problem (DJJSP) with machine breakdowns, variable job arrivals, and stochastic environments.*  
 
-- 🔹 [**PetriRL Hyperheuristics**](#) *(Planned for 2025)*  
+- 🔹 [**PetriRL Hyperheuristics**](#) *(Planned for 2025/2026)*  
   *A super-heuristic framework where RL learns to combine and select dispatching rules for adaptive scheduling.*  
 
 - 🔹 [**PetriRL Multi-Objective Optimization**](#) *(Planned 2026)*  
