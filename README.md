@@ -24,7 +24,7 @@ The PetriRL framework is organized into multiple environments, each targeting a 
   *Dynamic scheduling of AGVs, tool sharing, and shop floor optimization in Flexible Manufacturing Systems.*  
 
 
-- 🔹 [**PetriRL Hyperheuristics**](#) *(Planned for 2026)*  
+- 🔹 [**PetriRL Hyperheuristics**](https://github.com/Sofiene-Uni/PetriRL_Hyperheuristic) *(Planned for 2026)*  
   *A Huper-heuristic framework where RL learns to combine and select dispatching rules for adaptive scheduling.*  
 
 - 🔹 [**PetriRL DJJSP**](https://github.com/Sofiene-Uni/PetriRL_DJSSP) *(Planned for 2027)*  
