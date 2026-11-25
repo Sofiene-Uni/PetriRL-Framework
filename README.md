@@ -47,7 +47,7 @@ The PetriRL framework is organized into multiple environments, each targeting a 
 - 🔹 [**PetriRL Revisiting Masking**](https://github.com/Sofiene-Uni/PetriRL-Masking) *(Planned for 2027)*  
   *Revisits action masking in highly constrained systems: hard masking compared with gradient-based masking of invalid actions.*  
 
-- 🔹 [**PetriRL Multi-Objective Optimization**](#) *(Planned 2026)*  
+- 🔹 [**PetriRL Multi-Objective Optimization**](#) *(Planned 2028)*  
   *Combines expert agents and actor-critic RL to solve scheduling problems with multiple objectives (e.g., makespan, tardiness, energy consumption).*  
 
 Each environment is **OpenAI Gym-compatible**, comes with **benchmarks** (Taillard + custom large-scale instances), and is designed for **reproducibility and extension**.  
