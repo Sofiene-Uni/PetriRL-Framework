@@ -41,8 +41,11 @@ The PetriRL framework is organized into multiple environments, each targeting a 
 - 🔹 [**PetriRL Hyperheuristics**](https://github.com/Sofiene-Uni/PetriRL_Hyperheuristic) *(Planned for 2026)*  
   *A hyper-heuristic framework where RL learns to combine and select dispatching rules for adaptive scheduling.*  
 
-- 🔹 [**PetriRL DJJSP**](https://github.com/Sofiene-Uni/PetriRL_DJSSP) *(Planned for 2027)*  
-  *Dynamic Job Shop Scheduling Problem (DJJSP) with machine breakdowns, variable job arrivals, and stochastic environments.*  
+- 🔹 [**PetriRL DJSSP**](https://github.com/Sofiene-Uni/PetriRL_DJSSP) *(Planned for 2027)*  
+  *Dynamic Job Shop Scheduling Problem (DJSSP) with machine breakdowns, variable job arrivals, and stochastic environments.*  
+
+- 🔹 [**PetriRL Revisiting Masking**](https://github.com/Sofiene-Uni/PetriRL-Masking) *(Planned for 2027)*  
+  *Revisits action masking in highly constrained systems: hard masking compared with gradient-based masking of invalid actions.*  
 
 - 🔹 [**PetriRL Multi-Objective Optimization**](#) *(Planned 2026)*  
   *Combines expert agents and actor-critic RL to solve scheduling problems with multiple objectives (e.g., makespan, tardiness, energy consumption).*  
@@ -71,11 +74,11 @@ pip install petrirl
 
 Specific environments can be created by selecting the corresponding Gym environment ID:
 
-1) Logistics:
+1) Intralogistics (FMS):
 ```python
-env = gym.make("petrirl-djssp-v0")
+env = gym.make("petrirl-fms-v0")
 ```
-2) Fault tolerant:
+2) Dynamic / fault tolerant (DJSSP):
 ```python
 env = gym.make("petrirl-dft-v0")
 ```
@@ -88,6 +91,7 @@ PetriRL has been applied to:
 - Flexible Manufacturing Systems intralogistics (AGV + tool sharing).  
 - Dynamic job shop scheduling with stochasticity.  
 - RL-based hyperheuristics for dispatching rule selection.  
+- Action masking in highly constrained systems.  
 - Multi-objective optimization in scheduling.  
 
 These works are part of my PhD and published in international journals:  
