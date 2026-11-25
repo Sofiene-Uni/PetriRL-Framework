@@ -31,7 +31,7 @@ Code, installation and documentation: [github.com/Sofiene-Uni/PetriRL-Studio](ht
 
 ---
 
-## PetriRL Environments  
+## PetriRL Gymnasium Environments  
 
 The PetriRL framework is organized into multiple environments, each targeting a different class of problems:  
 
