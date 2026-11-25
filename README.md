@@ -21,18 +21,13 @@ This combination enables **interpretable, scalable, and high-performing RL agent
 
 [**PetriRL Studio**](https://github.com/Sofiene-Uni/PetriRL-Studio) is a web application on top of the PetriRL environments: train and use agents without writing code, and watch what they do.  
 
-![PetriRL Studio: an agent schedules a job shop, replayed on the Petri net and the Gantt chart](assets/petrirl-studio-home.gif)
+![PetriRL Studio: an agent schedules a job shop, replayed on the Petri net and the Gantt chart](assets/replay-overview.gif)
 
 - **Solve** your own instances (drag and drop) or the 242 classic job shop benchmarks, and compare agents and dispatching rules by their gap to the optimum or best known solution.  
 - **Replay** an episode firing by firing on the Petri net, synced with an interactive Gantt chart, with the enabled and masked actions at each decision and the policy's probabilities and confidence.  
 - **Train** MaskablePPO agents in the dispatching or the hyper-heuristic environment and follow the learning curve live.  
 
-```bash
-git clone https://github.com/Sofiene-Uni/PetriRL-Studio.git
-cd PetriRL-Studio
-pip install -r requirements.txt
-python run.py          # http://localhost:5000
-```
+Code, installation and documentation: [github.com/Sofiene-Uni/PetriRL-Studio](https://github.com/Sofiene-Uni/PetriRL-Studio)  
 
 ---
 
@@ -144,4 +139,4 @@ This repository provides the **main entry point** to PetriRL, including:
 - Links to specialized environments.  
 - The **PetriRL Studio** web application ([repository](https://github.com/Sofiene-Uni/PetriRL-Studio)).  
 - Documentation and research context.  
-- Benchmarks and reproducible pipelines for evaluation.
+- Benchmarks and reproducible pipelines for evaluation.  
