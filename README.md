@@ -71,18 +71,6 @@ Install the core PetriRL package via pip:
 ```bash
 pip install petrirl
 ```
-
-Specific environments can be created by selecting the corresponding Gym environment ID:
-
-1) Intralogistics (FMS):
-```python
-env = gym.make("petrirl-fms-v0")
-```
-2) Dynamic / fault tolerant (DJSSP):
-```python
-env = gym.make("petrirl-dft-v0")
-```
-
 ---
 
 ## Research Context  
