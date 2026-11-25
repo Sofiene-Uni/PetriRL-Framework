@@ -44,7 +44,7 @@ The PetriRL framework is organized into multiple environments, each targeting a 
 - 🔹 [**PetriRL DJJSP**](https://github.com/Sofiene-Uni/PetriRL_DJSSP) *(Planned for 2027)*  
   *Dynamic Job Shop Scheduling Problem (DJJSP) with machine breakdowns, variable job arrivals, and stochastic environments.*  
 
-- 🔹 [**PetriRL Multi-Objective Optimization**](#) *(Planned 2026)*  
+- 🔹 [**PetriRL Multi-Objective Optimization**](#) *(Planned 2027)*  
   *Combines expert agents and actor-critic RL to solve scheduling problems with multiple objectives (e.g., makespan, tardiness, energy consumption).*  
 
 Each environment is **OpenAI Gym-compatible**, comes with **benchmarks** (Taillard + custom large-scale instances), and is designed for **reproducibility and extension**.  
