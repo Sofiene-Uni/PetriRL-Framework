@@ -1,18 +1,38 @@
 # PetriRL: Explainable Reinforcement Learning with Petri Nets  
 
-**PetriRL** is a research framework that integrates **Colored-Timed Petri Nets (CTPNs)** with **Reinforcement Learning (RL)** to solve complex scheduling and optimization problems in **Flexible Manufacturing Systems (FMS)** and beyond.  
+**PetriRL** is a research framework that integrates **Colored-Timed Petri Nets (CTPNs)** with **Reinforcement Learning (RL)** to solve complex scheduling and optimization problems in **Discrete Event Systems (DES)**, from the **Job Shop Scheduling Problem (JSSP)** to **Flexible Manufacturing Systems (FMS)** and beyond.  
 
-Developed as part of my PhD on *Explainable Model-Based Reinforcement Learning for Discrete Event Systems*, PetriRL provides a **formal, modular, and reproducible** approach to dynamic scheduling, intralogistics, and decision-making under uncertainty.  
+Developed as part of my PhD on *Explainable Model-Based Reinforcement Learning for Discrete Event Systems* at South Westphalia University of Applied Sciences (FH SWF), PetriRL provides a **formal, modular, and reproducible** approach to dynamic scheduling, intralogistics, and decision-making under uncertainty.  
 
 ## Core Idea  
 
 PetriRL bridges **Petri net modeling** and **RL-based decision-making**:  
 
 - **Petri Nets** provide formal semantics, modular scalability, and explainability via token flow and graphical structure.  
+- **Event-based RL**: the agent is called only when a decision is possible; between decisions the net fires its automatic and timed transitions and the clock jumps to the next event.  
 - **Reinforcement Learning** provides adaptability, generalization, and efficient online decision-making under dynamic conditions.  
 - **Dynamic Action Masking** (from Petri net guard functions) reduces the RL action space, improving sample efficiency and convergence.  
 
 This combination enables **interpretable, scalable, and high-performing RL agents** for scheduling, dispatching, and optimization in discrete event systems.  
+
+---
+
+## PetriRL Studio  
+
+[**PetriRL Studio**](https://github.com/Sofiene-Uni/PetriRL-Studio) is a web application on top of the PetriRL environments: train and use agents without writing code, and watch what they do.  
+
+![PetriRL Studio: an agent schedules a job shop, replayed on the Petri net and the Gantt chart](assets/petrirl-studio-home.gif)
+
+- **Solve** your own instances (drag and drop) or the 242 classic job shop benchmarks, and compare agents and dispatching rules by their gap to the optimum or best known solution.  
+- **Replay** an episode firing by firing on the Petri net, synced with an interactive Gantt chart, with the enabled and masked actions at each decision and the policy's probabilities and confidence.  
+- **Train** MaskablePPO agents in the dispatching or the hyper-heuristic environment and follow the learning curve live.  
+
+```bash
+git clone https://github.com/Sofiene-Uni/PetriRL-Studio.git
+cd PetriRL-Studio
+pip install -r requirements.txt
+python run.py          # http://localhost:5000
+```
 
 ---
 
@@ -23,9 +43,8 @@ The PetriRL framework is organized into multiple environments, each targeting a 
 - 🔹 [**PetriRL Intralogistics**](https://github.com/Sofiene-Uni/PetriRL_Intralogistics)  
   *Dynamic scheduling of AGVs, tool sharing, and shop floor optimization in Flexible Manufacturing Systems.*  
 
-
 - 🔹 [**PetriRL Hyperheuristics**](https://github.com/Sofiene-Uni/PetriRL_Hyperheuristic) *(Planned for 2026)*  
-  *A Huper-heuristic framework where RL learns to combine and select dispatching rules for adaptive scheduling.*  
+  *A hyper-heuristic framework where RL learns to combine and select dispatching rules for adaptive scheduling.*  
 
 - 🔹 [**PetriRL DJJSP**](https://github.com/Sofiene-Uni/PetriRL_DJSSP) *(Planned for 2027)*  
   *Dynamic Job Shop Scheduling Problem (DJJSP) with machine breakdowns, variable job arrivals, and stochastic environments.*  
@@ -57,14 +76,15 @@ pip install petrirl
 
 Specific environments can be created by selecting the corresponding Gym environment ID:
 
-1) Logistics: 
-```bash
- env = gym.make("petrirl-djssp-v0")
+1) Logistics:
+```python
+env = gym.make("petrirl-djssp-v0")
 ```
 2) Fault tolerant:
-```bash
- env = gym.make("petrirl-dft-v0")
+```python
+env = gym.make("petrirl-dft-v0")
 ```
+
 ---
 
 ## Research Context  
@@ -87,33 +107,32 @@ These works are part of my PhD and published in international journals:
 
 ## Citation  
 
-If you use this framework, please cite the associated papers:  
+PetriRL and PetriRL Studio were developed by **Sofiene Lassoued** during his PhD at **South Westphalia University of Applied Sciences (Fachhochschule Südwestfalen, FH SWF)**. You are welcome to use and extend them; please keep this credit in copies and derived work. If you use this framework, please cite the associated papers:  
 
 ```bibtex
-
-@article{
-title = {Introducing PetriRL: An innovative framework for JSSP resolution integrating Petri nets and event-based reinforcement learning},
-author = {Sofiene Lassoued and Andreas Schwung},
-journal = {Journal of Manufacturing Systems},
-volume = {74},
-pages = {690-702},
-year = {2024},
-issn = {0278-6125},
-doi = {https://doi.org/10.1016/j.jmsy.2024.04.028},
-url = {https://www.sciencedirect.com/science/article/pii/S0278612524000943},
+@article{lassoued2024petrirl,
+  title   = {Introducing PetriRL: An innovative framework for JSSP resolution integrating Petri nets and event-based reinforcement learning},
+  author  = {Lassoued, Sofiene and Schwung, Andreas},
+  journal = {Journal of Manufacturing Systems},
+  volume  = {74},
+  pages   = {690--702},
+  year    = {2024},
+  issn    = {0278-6125},
+  doi     = {10.1016/j.jmsy.2024.04.028},
+  url     = {https://www.sciencedirect.com/science/article/pii/S0278612524000943}
 }
 
-@article{
-title = {Flexible Manufacturing Systems intralogistics: Dynamic optimization of AGVs and tool sharing using Colored-Timed Petri Nets and actor–critic RL with actions masking},
-author = {Sofiene Lassoued, Laxmikant Shrikant Baheti, Nathalie Weiß-Borkowski, Stefan Lier, Andreas Schwung}
-journal = {Journal of Manufacturing Systems},
-volume = {82},
-pages = {405-419},
-year = {2025},
-issn = {0278-6125},
-doi = {https://doi.org/10.1016/j.jmsy.2025.06.017.},
-url = {https://www.sciencedirect.com/science/article/pii/S0278612525001694},
-
+@article{lassoued2025intralogistics,
+  title   = {Flexible Manufacturing Systems intralogistics: Dynamic optimization of AGVs and tool sharing using Colored-Timed Petri Nets and actor--critic RL with actions masking},
+  author  = {Lassoued, Sofiene and Baheti, Laxmikant Shrikant and Weiß-Borkowski, Nathalie and Lier, Stefan and Schwung, Andreas},
+  journal = {Journal of Manufacturing Systems},
+  volume  = {82},
+  pages   = {405--419},
+  year    = {2025},
+  issn    = {0278-6125},
+  doi     = {10.1016/j.jmsy.2025.06.017},
+  url     = {https://www.sciencedirect.com/science/article/pii/S0278612525001694}
+}
 ```
 
 ---
@@ -123,5 +142,6 @@ url = {https://www.sciencedirect.com/science/article/pii/S0278612525001694},
 This repository provides the **main entry point** to PetriRL, including:  
 - The **core PetriRL package** (`pip install petrirl`).  
 - Links to specialized environments.  
+- The **PetriRL Studio** web application ([repository](https://github.com/Sofiene-Uni/PetriRL-Studio)).  
 - Documentation and research context.  
-- Benchmarks and reproducible pipelines for evaluation.  
+- Benchmarks and reproducible pipelines for evaluation.
